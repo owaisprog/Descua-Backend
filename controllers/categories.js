@@ -2,6 +2,9 @@
 
 const CategoriesModel  = require('../models/categories')
 
+ 
+// handle post categories controller
+
 async function handlePostCategories(req,res){
     const {name, entries, description} = req.body
     try{
@@ -17,6 +20,9 @@ async function handlePostCategories(req,res){
     }
 }
 
+
+// handle get categories controller
+
 async function handleGetCategories(req,res){
     try{
     const data = await CategoriesModel.findAll()
@@ -27,6 +33,7 @@ async function handleGetCategories(req,res){
     }
 }
 
+// handle update categories controller
 
 
 async function handleUpdateCategories(req,res){
@@ -53,6 +60,9 @@ async function handleUpdateCategories(req,res){
 }
 
 
+// handle delete categories controller
+
+
 async function handleCategoryDelete(req,res){
     const Id = req.params.id
     try{
@@ -70,6 +80,7 @@ async function handleCategoryDelete(req,res){
     }
 }
 
+// handle getOne categories controller
 
 
 async function handleCategoryOne(req,res){

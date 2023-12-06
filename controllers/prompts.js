@@ -2,6 +2,8 @@
 
 const promptsModel = require('../models/prompts')
 
+// handle post categories prompts
+
 async function handleCreatePrompts(req,res){
     const {description, statement, date} = req.body
     try{
@@ -17,6 +19,7 @@ async function handleCreatePrompts(req,res){
     }
 }
 
+// handle get categories controller
 
 
 async function handleGetAllPrompts(req,res){
@@ -28,6 +31,8 @@ async function handleGetAllPrompts(req,res){
         res.status(500).json(`An error occured : ${error}`)
     }
 }
+
+// handle update categories controller
 
 async function handleUpdatePrompts(req,res){
     const userId = req.params.id;
@@ -53,6 +58,8 @@ async function handleUpdatePrompts(req,res){
 }
 
 
+// handle delete categories controller
+
 
 async function handlPromptsDelete(req,res){
     const Id = req.params.id
@@ -71,6 +78,8 @@ async function handlPromptsDelete(req,res){
     }
 }
 
+
+// handle getOne categories controller
 
 
 async function handlePromptsOne(req,res){
